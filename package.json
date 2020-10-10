@@ -12,5 +12,7 @@
     "core-js": "^3.6.5",
     "nuxt": "^2.14.5"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@nuxtjs/date-fns": "^1.4.0"
+  }
 }

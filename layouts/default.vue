@@ -34,10 +34,10 @@
 </script>
 
 <style>
-    .main-content {
+    /* .main-content {
         margin-left: 0;
     }
     .topnav {
         background: #2d313e;
-    }
+    } */
 </style>
