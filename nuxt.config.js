@@ -1,5 +1,6 @@
 export default {
     // Global page headers (https://go.nuxtjs.dev/config-head)
+    loading: '~/components/Preloader.vue',
     head: {
       title: 'Dygoo',
       meta: [
@@ -41,8 +42,17 @@ export default {
   
     // Modules (https://go.nuxtjs.dev/config-modules)
     modules: [
+    	'nuxt-socket-io',
       '@nuxtjs/date-fns'
-    ],
+		],
+
+		io: {
+			// module options
+			sockets: [{
+				name: 'main',
+				url: 'http://localhost:7000'
+			}]
+		},
   
     // Build Configuration (https://go.nuxtjs.dev/config-build)
     build: {

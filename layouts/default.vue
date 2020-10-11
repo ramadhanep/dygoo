@@ -1,6 +1,6 @@
 <template>
     <div id="layout-wrapper">
-        <Header/>
+        <!-- <Header/> -->
         
         <div class="main-content">
 
@@ -19,9 +19,11 @@
 </template>
 
 <script>
+    import VueCookie from 'vue-cookie'
 
     import Header from "~/components/layouts/Header"
     import Footer from "~/components/layouts/Footer"
+
     export default {
         head: {
             bodyAttrs: {
@@ -29,7 +31,32 @@
                 "data-topbar": "colored"
             }
         },
-        components: { Header, Footer }
+        components: { Header, Footer },
+        mounted() {
+            this.loggedIn()
+        },
+        data() {
+            return {
+                authData: {
+                    username: "",
+                    room: ""
+                }
+            }
+        },
+        methods: {
+            async loggedIn() {
+                this.authData.username = VueCookie.get('__authUsername')
+                this.authData.room = VueCookie.get('__authRoom')
+
+                if (this.authData.username == undefined && this.authData.room == undefined) {
+                    this.$router.push("/login")
+                }
+                else {
+                    const username = this.authData.username,
+                    room = this.authData.room
+                }
+            }
+        }
     }
 </script>
 

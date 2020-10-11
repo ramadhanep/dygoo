@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.5"
+    "nuxt": "^2.14.5",
+    "nuxt-socket-io": "^1.1.11",
+    "vue-cookie": "^1.1.4"
   },
   "devDependencies": {
     "@nuxtjs/date-fns": "^1.4.0"

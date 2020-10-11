@@ -85,9 +85,7 @@
                     <div class="dropdown d-inline-block">
                         <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="rounded-circle header-profile-user" src="~/assets/images/users/avatar-4.jpg"
-                                alt="Header Avatar">
-                            <span class="d-none d-xl-inline-block ml-1 font-weight-medium font-size-15">Marcus</span>
+                            <span class="d-none d-xl-inline-block ml-1 font-weight-medium font-size-15">Romadhan</span>
                             <i class="uil-angle-down d-none d-xl-inline-block font-size-15"></i>
                         </button>
                         <div class="dropdown-menu dropdown-menu-right">
