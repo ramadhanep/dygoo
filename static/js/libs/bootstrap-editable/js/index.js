@@ -2290,9 +2290,9 @@ Makes editable any HTML element on the page. Applied as jQuery method.
         @example
         <div id="user">
           <!-- empty -->
-          <a href="#" data-name="username" data-type="text" class="editable-click editable-empty" data-value="" title="Username">Empty</a>
+          <a href="javascript:void(0)" data-name="username" data-type="text" class="editable-click editable-empty" data-value="" title="Username">Empty</a>
           <!-- non-empty -->
-          <a href="#" data-name="group" data-type="select" data-source="/groups" data-value="1" class="editable-click" title="Group">Operator</a>
+          <a href="javascript:void(0)" data-name="group" data-type="select" data-source="/groups" data-value="1" class="editable-click" title="Group">Operator</a>
         </div>     
         
         <script>
@@ -2881,7 +2881,7 @@ Text input
 @extends abstractinput
 @final
 @example
-<a href="#" id="username" data-type="text" data-pk="1">awesome</a>
+<a href="javascript:void(0)" id="username" data-type="text" data-pk="1">awesome</a>
 <script>
 $(function(){
     $('#username').editable({
@@ -3016,7 +3016,7 @@ Textarea input
 @extends abstractinput
 @final
 @example
-<a href="#" id="comments" data-type="textarea" data-pk="1">awesome comment!</a>
+<a href="javascript:void(0)" id="comments" data-type="textarea" data-pk="1">awesome comment!</a>
 <script>
 $(function(){
     $('#comments').editable({
@@ -3128,7 +3128,7 @@ Select (dropdown)
 @extends list
 @final
 @example
-<a href="#" id="status" data-type="select" data-pk="1" data-url="/post" data-title="Select status"></a>
+<a href="javascript:void(0)" id="status" data-type="select" data-pk="1" data-url="/post" data-title="Select status"></a>
 <script>
 $(function(){
     $('#status').editable({
@@ -3226,7 +3226,7 @@ Internally value stored as javascript array of values.
 @extends list
 @final
 @example
-<a href="#" id="options" data-type="checklist" data-pk="1" data-url="/post" data-title="Select options"></a>
+<a href="javascript:void(0)" id="options" data-type="checklist" data-pk="1" data-url="/post" data-title="Select options"></a>
 <script>
 $(function(){
     $('#options').editable({
@@ -3397,7 +3397,7 @@ https://developer.mozilla.org/en-US/docs/HTML/Element/Input
 @final
 @since 1.3.0
 @example
-<a href="#" id="email" data-type="email" data-pk="1">admin@example.com</a>
+<a href="javascript:void(0)" id="email" data-type="email" data-pk="1">admin@example.com</a>
 <script>
 $(function(){
     $('#email').editable({
@@ -3610,7 +3610,7 @@ To make it **bootstrap-styled** you can use css from [here](https://github.com/t
 **Note:** currently `autotext` feature does not work for select2 with `ajax` remote source.    
 You need initially put both `data-value` and element's text youself:    
 
-    <a href="#" data-type="select2" data-value="1">Text1</a>
+    <a href="javascript:void(0)" data-type="select2" data-value="1">Text1</a>
     
     
 @class select2
@@ -3618,7 +3618,7 @@ You need initially put both `data-value` and element's text youself:
 @since 1.4.1
 @final
 @example
-<a href="#" id="country" data-type="select2" data-pk="1" data-value="ru" data-url="/post" data-title="Select country"></a>
+<a href="javascript:void(0)" id="country" data-type="select2" data-pk="1" data-value="ru" data-url="/post" data-title="Select country"></a>
 <script>
 $(function(){
     //local source
@@ -4449,7 +4449,7 @@ Internally value stored as `momentjs` object.
 @final
 @since 1.4.0
 @example
-<a href="#" id="dob" data-type="combodate" data-pk="1" data-url="/post" data-value="1984-05-15" data-title="Select date"></a>
+<a href="javascript:void(0)" id="dob" data-type="combodate" data-pk="1" data-url="/post" data-value="1984-05-15" data-title="Select date"></a>
 <script>
 $(function(){
     $('#dob').editable({
@@ -4506,7 +4506,7 @@ $(function(){
             //"clear" link
             /*
             if(this.options.clear) {
-                this.$clear = $('<a href="#"></a>').html(this.options.clear).click($.proxy(function(e){
+                this.$clear = $('<a href="javascript:void(0)"></a>').html(this.options.clear).click($.proxy(function(e){
                     e.preventDefault();
                     e.stopPropagation();
                     this.clear();
@@ -6184,7 +6184,7 @@ Since 1.4.0 date has different appearance in **popup** and **inline** modes.
 @extends abstractinput
 @final
 @example
-<a href="#" id="dob" data-type="date" data-pk="1" data-url="/post" data-title="Select date">15/05/1984</a>
+<a href="javascript:void(0)" id="dob" data-type="date" data-pk="1" data-url="/post" data-title="Select date">15/05/1984</a>
 <script>
 $(function(){
     $('#dob').editable({
@@ -6248,7 +6248,7 @@ $(function(){
             
             //"clear" link
             if(this.options.clear) {
-                this.$clear = $('<a href="#"></a>').html(this.options.clear).click($.proxy(function(e){
+                this.$clear = $('<a href="javascript:void(0)"></a>').html(this.options.clear).click($.proxy(function(e){
                     e.preventDefault();
                     e.stopPropagation();
                     this.clear();
@@ -6500,7 +6500,7 @@ and set `language` option.
 @final
 @since 1.4.4
 @example
-<a href="#" id="last_seen" data-type="datetime" data-pk="1" data-url="/post" title="Select date & time">15/03/2013 12:45</a>
+<a href="javascript:void(0)" id="last_seen" data-type="datetime" data-pk="1" data-url="/post" title="Select date & time">15/03/2013 12:45</a>
 <script>
 $(function(){
     $('#last_seen').editable({
@@ -6568,7 +6568,7 @@ $(function(){
 
             //"clear" link
             if(this.options.clear) {
-                this.$clear = $('<a href="#"></a>').html(this.options.clear).click($.proxy(function(e){
+                this.$clear = $('<a href="javascript:void(0)"></a>').html(this.options.clear).click($.proxy(function(e){
                     e.preventDefault();
                     e.stopPropagation();
                     this.clear();

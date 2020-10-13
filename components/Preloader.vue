@@ -2,7 +2,7 @@
     <div v-if="loading" id="preloader">
         <div id="status">
             <div class="spinner">
-                <i class="uil-smile spin-icon"></i>
+                <i class="uil-cell spin-icon"></i>
             </div>
         </div>
     </div>

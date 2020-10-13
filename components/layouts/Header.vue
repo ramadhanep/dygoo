@@ -5,7 +5,7 @@
                 <div class="d-flex">
                     <!-- LOGO -->
                     <div class="navbar-brand-box">
-                        <a href="#" class="logo">
+                        <a href="javascript:void(0)" class="logo">
                             <span class="logo-sm">
                                 <img src="~/assets/images/logo.png" alt="" height="22">
                             </span>
@@ -57,7 +57,7 @@
                                 </div>
                             </div>
                             <div data-simplebar style="max-height: 230px;">
-                                <a href="#" class="text-reset notification-item">
+                                <a href="javascript:void(0)" class="text-reset notification-item">
                                     <div class="media">
                                         <div class="avatar-xs mr-3">
                                             <span class="avatar-title bg-primary rounded-circle font-size-16">
@@ -90,8 +90,8 @@
                         </button>
                         <div class="dropdown-menu dropdown-menu-right">
                             <!-- item-->
-                            <a class="dropdown-item d-block" href="#"><i class="uil uil-cog font-size-18 align-middle mr-1 text-muted"></i> <span class="align-middle">Settings</span></a>
-                            <a class="dropdown-item" href="#"><i class="uil uil-sign-out-alt font-size-18 align-middle mr-1 text-muted"></i> <span class="align-middle">Sign out</span></a>
+                            <a class="dropdown-item d-block" href="javascript:void(0)"><i class="uil uil-cog font-size-18 align-middle mr-1 text-muted"></i> <span class="align-middle">Settings</span></a>
+                            <a class="dropdown-item" href="javascript:void(0)"><i class="uil uil-sign-out-alt font-size-18 align-middle mr-1 text-muted"></i> <span class="align-middle">Sign out</span></a>
                         </div>
                     </div>
         

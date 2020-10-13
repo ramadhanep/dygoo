@@ -9,10 +9,14 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-session": "^1.15.3",
     "core-js": "^3.6.5",
     "nuxt": "^2.14.5",
     "nuxt-socket-io": "^1.1.11",
-    "vue-cookie": "^1.1.4"
+    "vue-chat-scroll": "^1.4.0"
   },
   "devDependencies": {
     "@nuxtjs/date-fns": "^1.4.0"

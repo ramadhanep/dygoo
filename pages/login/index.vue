@@ -45,8 +45,6 @@
 </template>
 
 <script>
-    import VueCookie from 'vue-cookie'
-
     export default {
         asyncData () {
             return new Promise((resolve) => {
@@ -55,9 +53,12 @@
                 }, 1000)
             })
         },
+        head: {
+            title: "Dygoo | Login"
+        },
         data() {
             return {
-                roomChat: ["Ruang Ketua DPR", "Ruang Wakil Ketua DPR", "Ruang Publik"],
+                roomChat: ["Javascript Developer"],
                 data: {
                     username: "",
                     room: ""
@@ -71,9 +72,11 @@
                     this.error = true
                 }
                 else {
-                    VueCookie.set('__authUsername', this.data.username, {expires: "12h"})
-                    VueCookie.set('__authRoom', this.data.room, {expires: "12h"})
-    
+                    await this.$store.dispatch('login', {
+                        username: this.data.username,
+                        room: this.data.room
+                    })
+
                     this.$router.push("/")
                 }
             }
