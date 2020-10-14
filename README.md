@@ -1,6 +1,4 @@
-<img src="assets/images/logo-dark.png" width="150">
-
-##
+## Dygoo
 > Social Media Chatting Application.
 
 ![](demo.png)
