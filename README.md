@@ -1,4 +1,7 @@
-# Dygoo
+<img src="assets/images/logo-dark.png" width="150">
+
+##
+> Social Media Chatting Application.
 
 ## Build Setup
 
