@@ -148,8 +148,8 @@
         },
         methods: {
             async logout() {
-                this.redirectToLogin()
                 await this.$store.dispatch('logout')
+                this.redirectToLogin()
             },
             nuxtSocketRegister() {
                 const authUser = this.$store.state.authUser

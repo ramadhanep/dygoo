@@ -46,6 +46,7 @@
 
 <script>
     export default {
+        middleware: "notAuthenticated",
         asyncData () {
             return new Promise((resolve) => {
                 setTimeout(function () {
@@ -58,7 +59,7 @@
         },
         data() {
             return {
-                roomChat: ["Javascript Developer"],
+                roomChat: ["Javascript Developer", "Devops Engineer"],
                 data: {
                     username: "",
                     room: ""

@@ -1,7 +1,8 @@
-import axios from 'axios'
+import VueCookie from 'vue-cookie'
+import CookieParser from 'cookieparser'
 
 export const state = () => ({
-    authUser: null
+    authUser: ""
 })
 
 export const mutations = {
@@ -12,15 +13,27 @@ export const mutations = {
 
 export const actions = {
     nuxtServerInit ({ commit }, { req }) {
-        if (req.session && req.session.authUser) {
-            commit('SET_AUTH_USER', req.session.authUser)
+        if(req && req.headers && req.headers.cookie) {
+            const cookieParsed = CookieParser.parse(req.headers.cookie)
+            const data = {
+                username: cookieParsed._____AuthUsername,
+                room: cookieParsed._____AuthRoom
+            }
+
+            commit('SET_AUTH_USER', data)
         }
     },
     async login ({ commit }, { username, room }) {
         try {
-            const response = await axios.post('/api/login', { username, room })
+            const data = {
+                username: username,
+                room: room
+            }
 
-            commit('SET_AUTH_USER', response.data)
+            VueCookie.set("_____AuthUsername", username)
+            VueCookie.set("_____AuthRoom", room)
+
+            commit('SET_AUTH_USER', data)
         }
         catch (error) {
             throw error
@@ -28,10 +41,10 @@ export const actions = {
     },
     async logout ({ commit }) {
         try {
-            const response = await axios.post('/api/logout')
-    
-            commit('SET_AUTH_USER', null)
-            return response
+            VueCookie.delete("_____AuthUsername")
+            VueCookie.delete("_____AuthRoom")
+            
+            commit('SET_AUTH_USER', "")
         }
         catch (error) {
             console.error(error)

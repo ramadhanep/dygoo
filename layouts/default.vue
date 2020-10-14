@@ -1,7 +1,6 @@
 <template>
     <div id="layout-wrapper">
         <!-- <Header/> -->
-        
         <div class="main-content">
 
             <div class="page-content">
@@ -24,7 +23,6 @@
     import Footer from "~/components/layouts/Footer"
 
     export default {
-        middleware: 'auth',
         head: {
             bodyAttrs: {
                 "data-layout": "horizontal",
@@ -36,4 +34,7 @@
 </script>
 
 <style>
+    body[data-layout=horizontal] .page-content {
+        margin-top: 50px;
+    }
 </style>
