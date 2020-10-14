@@ -1,4 +1,4 @@
-## Dygoo
+# Dygoo
 > Social Media Chatting Application.
 
 ![](demo.png)
