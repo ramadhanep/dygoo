@@ -3,21 +3,19 @@
 ##
 > Social Media Chatting Application.
 
-## Build Setup
+[![NPM Version][npm-image]][npm-url]
+[![Downloads Stats][npm-downloads]][npm-url]
 
-```bash
-# install dependencies
-$ npm install
+## Installation
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+Install Package:
 
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
+```sh
+npm install
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+Running Application:
+
+```sh
+npm run dev
+```
